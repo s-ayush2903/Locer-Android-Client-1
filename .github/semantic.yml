@@ -1,0 +1,16 @@
+# Use these in PR titles as qualifiers to make them semantic
+types:
+  - feat
+  - fix
+  - docs
+  - style
+  - refactor
+  - perf
+  - test
+  - tests
+  - build
+  - ci
+  - chore
+  - revert
+  - choreUtils
+  - CI
