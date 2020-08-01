@@ -2,6 +2,8 @@ package deps.implementations
 
 import deps.versions.Framework
 
+/* Put kapts too here */
+// All android deps go in here (other than testing ones)
 object Framework {
     // Jetpack Deps
     const val navFragment = "androidx.navigation:navigation-fragment-ktx:${Framework.navComponents}"
@@ -18,4 +20,10 @@ object Framework {
     //Lifecycle handling
 //    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:${Framework.lifecycleVersion}"
 //    const val lifecycleCoRoutines = "androidx.lifecycle:lifecycle-livedata-ktx:${Framework.lifecycleVersion}"
+
+
+    // External Libs (like introScreen)
+    const val introScreen = "com.github.foodbee:IntroScreen:${Framework.introScreen}"
 }
+
+/* Activate the commented out deps when they are need to be in use and use their most stable version not the latest one */

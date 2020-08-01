@@ -1,7 +1,8 @@
-import coreplugins.BuildPlugins.androidKotlinPlugin
+import coreplugins.BuildPlugins.absoluteRawKotlin
 import deps.App
 import deps.implementations.Framework.appCompat
 import deps.implementations.Framework.constraintLayout
+import deps.implementations.Framework.introScreen
 import deps.implementations.KtServices.ktx
 import deps.implementations.TestingFramework.androidxTestExt
 import deps.implementations.TestingFramework.espressoCore
@@ -12,9 +13,8 @@ import org.gradle.api.JavaVersion.VERSION_1_8
 plugins {
     id(coreplugins.BuildPlugins.androidApplication)
     id(coreplugins.BuildPlugins.kotlinAndroid)
-//    id(coreplugins.BuildPlugins.kotlinAndroidExtensions)
+    id(coreplugins.BuildPlugins.kotlinAndroidExtensions)
     id(coreplugins.BuildPlugins.kotlinKapt)
-    id("kotlin-android-extensions")
 }
 
 android {
@@ -36,7 +36,7 @@ android {
     //not needed as of now
     /*signingConfigs {
         register("release") {
-            storeFile = file("keystores/todoapp.keystore")
+            storeFile = file("keystores/foodDelivApp.keystore")
             storePassword = "toooor"
             keyAlias = "key"
             keyPassword = "toooor"
@@ -45,13 +45,12 @@ android {
 
     defaultConfig {
         applicationId = (App.id)
-        minSdkVersion (AndroidConfigs.minSdk)
-        targetSdkVersion (AndroidConfigs.targetSdk)
+        minSdkVersion(AndroidConfigs.minSdk)
+        targetSdkVersion(AndroidConfigs.targetSdk)
         versionCode = (App.versionCode)
         versionName = (App.versionName)
 
-//    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-      testInstrumentationRunner = standardRunner
+        testInstrumentationRunner = standardRunner
     }
 
     buildTypes {
@@ -64,16 +63,26 @@ android {
             )
         }
     }
+
+    buildFeatures{
+        dataBinding = true
+    }
+
 }
 
 
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+
+    // put rest deps here
+    implementation(absoluteRawKotlin)
     implementation(ktx)
-    implementation(androidKotlinPlugin) // it contains kotlin-lang version
     implementation(appCompat)
     implementation(constraintLayout)
+    implementation(introScreen)
+
+    // put test deps here
     testImplementation(junit4)
     androidTestImplementation(espressoCore)
     androidTestImplementation(androidxTestExt)
