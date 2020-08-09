@@ -3,4 +3,8 @@
   <color name="colorPrimary">#6200EE</color>
   <color name="colorPrimaryDark">#3700B3</color>
   <color name="colorAccent">#03DAC5</color>
+  <color name="dotInactive">#C4C4C4</color>  <!-- Grey -->
+  <color name="teal">#3ac2af</color>  <!-- Grey -->
+  <color name="brownish"> #fdebd0 </color>  <!-- Grey -->
+  <color name="green"> #17a589 </color>  <!-- Grey -->
 </resources>

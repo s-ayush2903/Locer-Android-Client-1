@@ -17,13 +17,16 @@ object Framework {
     const val materialDesign = "com.google.android.material:material:${Framework.materialDesign}"
     const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${Framework.swipeRefreshLayout}"
 
+    const val sharedPreferences = "androidx.preference:preference-ktx:${Framework.sharedPreferences}"
+
     //Lifecycle handling
 //    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:${Framework.lifecycleVersion}"
 //    const val lifecycleCoRoutines = "androidx.lifecycle:lifecycle-livedata-ktx:${Framework.lifecycleVersion}"
 
 
     // External Libs (like introScreen)
-    const val introScreen = "com.github.foodbee:IntroScreen:${Framework.introScreen}"
+//    const val introScreen = "com.github.foodbee:IntroScreen:${Framework.introScreen}"
+    const val introScreen = "com.github.AppIntro:AppIntro:${Framework.introScreen}"
 }
 
 /* Activate the commented out deps when they are need to be in use and use their most stable version not the latest one */

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">LocerAndroid</string>
+    <string name="quick_deliv">Quick delivery to your doorstep </string>
+    <string name="deliv_reliability">Get food delivered directly from LOCER</string>
+    <string name="food_varieties">Over a wide range of delicacies</string>
+    <string name="lets_start">Let\'s get you started</string>
+    <string name="launched_once">Intro Activity launched once</string>
 </resources>
