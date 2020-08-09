@@ -25,7 +25,6 @@ object Framework {
 
 
     // External Libs (like introScreen)
-//    const val introScreen = "com.github.foodbee:IntroScreen:${Framework.introScreen}"
     const val introScreen = "com.github.AppIntro:AppIntro:${Framework.introScreen}"
 }
 

@@ -1,8 +1,8 @@
 package org.locer.`in`
 
+import android.Manifest
 import android.app.Activity
 import android.content.Intent
-import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
 import androidx.core.content.ContextCompat
@@ -16,20 +16,18 @@ import com.github.appintro.AppIntroPageTransformerType
  */
 
 class IntroActivity : AppIntro() {
-    private lateinit var prefs: SharedPreferences
 
-    //    private val activity: IntroActivity()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
-        isButtonsEnabled = false
 
         setImmersiveMode()
+        isButtonsEnabled = false
         isIndicatorEnabled = true
         isColorTransitionsEnabled = true
         isVibrate = false
         setProgressIndicator()
 
+        // for added parallax effect
         setTransformer(
             AppIntroPageTransformerType.Parallax(
                 titleParallaxFactor = 1.0,
@@ -38,6 +36,7 @@ class IntroActivity : AppIntro() {
             )
         )
 
+        // TODO: 9/8/20 colors of slides and text need to be changed
         addSlide(
             AppIntroFragment.newInstance(
                 backgroundColor = ContextCompat.getColor(this, R.color.dotInactive),
@@ -71,20 +70,47 @@ class IntroActivity : AppIntro() {
             )
         )
 
+        addSlide(
+            AppIntroFragment.newInstance(
+                backgroundColor = ContextCompat.getColor(this, R.color.teal),
+                title = getString(R.string.permssions_title),
+                description = getString(R.string.permssions_desc),
+                imageDrawable = R.drawable.permits,
+                titleColor = Color.BLUE,
+                descriptionColor = Color.BLACK
+            )
+        )
+
+        // mandatory permissions, they have to be provided at the time of asking
+        // TODO: 9/8/20 Handle the case when user denies the permissions for now or chooses the option *Never ask again*
+        askPermissions()
+    }
+
+    fun askPermissions() {
+        askForPermissions(
+            permissions = arrayOf(
+                Manifest.permission.INTERNET,
+                Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.READ_SMS
+            ),
+            slideNumber = 4,
+            required = true
+        )
     }
 
     /** Called when the AppIntro reached the end. */
     override fun onIntroFinished() {
         super.onIntroFinished()
         setResult(Activity.RESULT_OK)
-        finish()
         startActivity(Intent(this, MainActivity::class.java))
-
+        finish()
     }
 
     /** Called when the user clicked the skip button */
     override fun onSkipPressed(currentFragment: Fragment?) {
         super.onSkipPressed(currentFragment)
+        askPermissions()
         startActivity(Intent(this, MainActivity::class.java))
         setResult(Activity.RESULT_OK)
         finish()
@@ -94,27 +120,9 @@ class IntroActivity : AppIntro() {
     override fun onDonePressed(currentFragment: Fragment?) {
         super.onDonePressed(currentFragment)
         setResult(Activity.RESULT_OK)
-        finish()
-        startActivity(Intent(this, MainActivity::class.java))
         // start a new intent
-    }
-
-    /**
-     * Dispatch onResume() to fragments.  Note that for better inter-operation
-     * with older versions of the platform, at the point of this call the
-     * fragments attached to the activity are *not* resumed.
-     */
-    override fun onResume() {
-        super.onResume()
-        // FIXME created @ 7/8/20: add the flag in sharedPref to check whether the introScreen has been launched once or not
-//        prefs = activity.getPreferences(Context.MODE_PRIVATE)
-//        val previouslyLaunched: Boolean = prefs.getBoolean(getString(R.string.launched_once), false)
-//        if (!previouslyLaunched) {
-//            with(prefs.edit()) {
-//                putBoolean(getString(R.string.launched_once), true)
-//                commit()
-//            }
-//        }
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 
 }

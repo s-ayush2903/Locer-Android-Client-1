@@ -5,4 +5,6 @@
     <string name="food_varieties">Over a wide range of delicacies</string>
     <string name="lets_start">Let\'s get you started</string>
     <string name="launched_once">Intro Activity launched once</string>
+    <string name="permssions_title">We need permissions to soothen your experience</string>
+    <string name="permssions_desc">Please provide us the permissions to get the best use case</string>
 </resources>
