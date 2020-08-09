@@ -10,8 +10,10 @@ object Framework {
     const val materialDesign = "1.1.0"
     const val swipeRefreshLayout = "1.1.0-alpha03"
 
+    const val sharedPreferences = "1.1.0"
+
     // external deps go in here
-    const val introScreen = "1.0"
+    const val introScreen = "6.0.0"
 
 
 }

@@ -3,6 +3,7 @@ import deps.App
 import deps.implementations.Framework.appCompat
 import deps.implementations.Framework.constraintLayout
 import deps.implementations.Framework.introScreen
+import deps.implementations.Framework.sharedPreferences
 import deps.implementations.KtServices.ktx
 import deps.implementations.TestingFramework.androidxTestExt
 import deps.implementations.TestingFramework.espressoCore
@@ -30,6 +31,10 @@ android {
     compileOptions {
         sourceCompatibility = VERSION_1_8
         targetCompatibility = VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = VERSION_1_8.toString()
     }
 
 
@@ -81,6 +86,7 @@ dependencies {
     implementation(appCompat)
     implementation(constraintLayout)
     implementation(introScreen)
+    implementation(sharedPreferences)
 
     // put test deps here
     testImplementation(junit4)
