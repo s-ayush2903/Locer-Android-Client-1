@@ -3,13 +3,13 @@
   xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-      android:id="@+id/action_home"
+      android:id="@+id/navigation_home"
       android:icon="@drawable/home_24px"
       android:title="Home"
       />
 
     <item
-      android:id="@+id/action_wishlist"
+      android:id="@+id/navigation_wishlist"
       android:icon="@drawable/favorite_black_18dp"
       android:title="Wishlist"
        />
@@ -22,7 +22,7 @@
       app:showAsAction="never" />
 
     <item
-      android:id="@+id/actionCart"
+      android:id="@+id/navigation_history"
       android:enabled="true"
       android:icon="@drawable/shopping_cart_black_18dp"
       android:title="History"

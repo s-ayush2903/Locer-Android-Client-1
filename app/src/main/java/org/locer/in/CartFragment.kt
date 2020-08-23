@@ -21,7 +21,7 @@ class CartFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         cartBoundLayout =
-            DataBindingUtil.inflate(layoutInflater, R.layout.fragment_cart, container, false)
+            DataBindingUtil.inflate(inflater, R.layout.fragment_cart, container, false)
 //        return inflater.inflate(R.layout.fragment_cart, container, false)
 
         return cartBoundLayout.root

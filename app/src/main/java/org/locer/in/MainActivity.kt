@@ -7,7 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.ActionMode
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.onNavDestinationSelected
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -18,7 +20,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var sharedPreferenceUtil: SharedPreferenceUtil
     private lateinit var boundLayout: ActivityMainBinding
     private lateinit var bottomNavView: BottomNavigationView
-    private lateinit var navController:NavController
+    private lateinit var appBarConfig: AppBarConfiguration
+    private lateinit var navController :NavController
     private var actionMode: ActionMode? = null
     private val finishActionModeOnDestinationChanged =
         NavController.OnDestinationChangedListener { controller, destination, bundle -> actionMode?.finish() }
@@ -35,15 +38,15 @@ class MainActivity : AppCompatActivity() {
         } else {
             boundLayout = DataBindingUtil.setContentView(this, R.layout.activity_main)
             bottomNavView = boundLayout.mainBottomNavView
-            findNavController(R.id.main_nav_host_fragment)
+//navController.addOnDestinationChangedListener()
 //            navController.addOnDestinationChangedListener(finishActionModeOnDestinationChanged)
+            navController = Navigation.findNavController(this, R.id.main_nav_host_fragment)
+            navController.addOnDestinationChangedListener(finishActionModeOnDestinationChanged)
+            appBarConfig = AppBarConfiguration(navController.graph)
+            boundLayout.mainBottomNavView.setupWithNavController(navController)
+
 //            setUpNavMenus(navController)
 //            setUpBottomNavMenu(findNavController(R.id.main_bottom_nav_view))
-//            boundLayout.mainBottomNavView.setOnNavigationItemSelectedListener {
-//                when(it.itemId){
-//                    R.id.actionCart -> findNavController(R.id.action_homeFragment_to_cartFragment)
-//                }
-//            }
 //            findNavController(R.id.main_nav_host_fragment)
 //            boundLayout.testButton.setOnClickListener {
 //                startActivity(Intent(this, IntroActivity::class.java))
@@ -76,7 +79,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpNavMenus(navController: NavController) {
         boundLayout.mainBottomNavView.setupWithNavController(navController = navController)
-        findNavController(R.id.main_nav_host_fragment)
     }
 
 // don't remove the following code, it may be helpful in future that's why it is kept here

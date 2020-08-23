@@ -2,39 +2,39 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:id="@+id/main_navigation"
-  app:startDestination="@id/homeFragment">
+  app:startDestination="@id/navigation_home">
     <fragment
-      android:id="@+id/cartFragment"
+      android:id="@+id/navigation_cart"
       android:name="org.locer.in.CartFragment"
       android:label="CartFragment">
         <action
           android:id="@+id/action_cartFragment_to_homeFragment"
-          app:destination="@id/homeFragment" />
+          app:destination="@id/navigation_home" />
         <action
           android:id="@+id/action_cartFragment_to_wishlistFragment"
-          app:destination="@id/wishlistFragment" />
+          app:destination="@id/navigation_wishlist" />
         <action
           android:id="@+id/action_cartFragment_to_historyFragment"
           app:destination="@id/historyFragment" />
     </fragment>
 
     <fragment
-      android:id="@+id/homeFragment"
+      android:id="@+id/navigation_home"
       android:name="org.locer.in.HomeFragment"
       android:label="HomeFragment">
         <action
           android:id="@+id/action_homeFragment_to_wishlistFragment"
-          app:destination="@id/wishlistFragment" />
+          app:destination="@id/navigation_wishlist" />
         <action
           android:id="@+id/action_homeFragment_to_historyFragment"
           app:destination="@id/historyFragment" />
         <action
           android:id="@+id/action_homeFragment_to_cartFragment"
-          app:destination="@id/cartFragment" />
+          app:destination="@id/navigation_cart" />
     </fragment>
 
     <fragment
-      android:id="@+id/wishlistFragment"
+      android:id="@+id/navigation_wishlist"
       android:name="org.locer.in.WishlistFragment"
       android:label="WishlistFragment">
         <action
@@ -42,10 +42,10 @@
           app:destination="@id/historyFragment" />
         <action
           android:id="@+id/action_wishlistFragment_to_homeFragment"
-          app:destination="@id/homeFragment" />
+          app:destination="@id/navigation_home" />
         <action
           android:id="@+id/action_wishlistFragment_to_cartFragment"
-          app:destination="@id/cartFragment" />
+          app:destination="@id/navigation_cart" />
     </fragment>
 
     <fragment
@@ -54,13 +54,13 @@
       android:label="HistoryFragment">
         <action
           android:id="@+id/action_historyFragment_to_wishlistFragment"
-          app:destination="@id/wishlistFragment" />
+          app:destination="@id/navigation_wishlist" />
         <action
           android:id="@+id/action_historyFragment_to_homeFragment"
-          app:destination="@id/homeFragment" />
+          app:destination="@id/navigation_home" />
         <action
           android:id="@+id/action_historyFragment_to_cartFragment"
-          app:destination="@id/cartFragment" />
+          app:destination="@id/navigation_cart" />
     </fragment>
 
 </navigation>
