@@ -15,17 +15,17 @@
        />
 
     <item
-      android:id="@+id/action_laundry"
+      android:id="@+id/navigation_laundry"
       android:enabled="true"
       android:icon="@drawable/local_laundry_service_black_18dp"
       android:title="Laundry"
       app:showAsAction="never" />
 
     <item
-      android:id="@+id/navigation_history"
+      android:id="@+id/navigation_cart"
       android:enabled="true"
       android:icon="@drawable/shopping_cart_black_18dp"
-      android:title="History"
+      android:title="Cart"
       app:showAsAction="never" />
 
 
