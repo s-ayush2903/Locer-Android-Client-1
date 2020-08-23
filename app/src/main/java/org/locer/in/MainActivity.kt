@@ -8,8 +8,8 @@ import org.locer.`in`.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var sharedPreferenceUtil: SharedPreferenceUtil
-
+    private lateinit var sharedPreferenceUtil: SharedPreferenceUtil
+    private lateinit var boundLayout: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sharedPreferenceUtil = SharedPreferenceUtil(context = this)
@@ -19,8 +19,7 @@ class MainActivity : AppCompatActivity() {
             sharedPreferenceUtil.setIntroShown()
             finish()
         } else {
-            val boundLayout: ActivityMainBinding =
-                DataBindingUtil.setContentView(this, R.layout.activity_main)
+            boundLayout = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
             boundLayout.testButton.setOnClickListener {
                 startActivity(Intent(this, IntroActivity::class.java))

@@ -3,6 +3,8 @@ import deps.App
 import deps.implementations.Framework.appCompat
 import deps.implementations.Framework.constraintLayout
 import deps.implementations.Framework.introScreen
+import deps.implementations.Framework.navFragment
+import deps.implementations.Framework.navUi
 import deps.implementations.Framework.sharedPreferences
 import deps.implementations.KtServices.ktx
 import deps.implementations.TestingFramework.androidxTestExt
@@ -87,6 +89,8 @@ dependencies {
     implementation(constraintLayout)
     implementation(introScreen)
     implementation(sharedPreferences)
+    implementation(navFragment)
+    implementation(navUi)
 
     // put test deps here
     testImplementation(junit4)

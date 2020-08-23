@@ -86,7 +86,7 @@ class IntroActivity : AppIntro() {
         askPermissions()
     }
 
-    fun askPermissions() {
+    private fun askPermissions() {
         askForPermissions(
             permissions = arrayOf(
                 Manifest.permission.INTERNET,

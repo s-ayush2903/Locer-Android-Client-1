@@ -5,6 +5,7 @@ import deps.versions.Framework
 /* Put kapts too here */
 // All android deps go in here (other than testing ones)
 object Framework {
+
     // Jetpack Deps
     const val navFragment = "androidx.navigation:navigation-fragment-ktx:${Framework.navComponents}"
     const val navRuntime = "androidx.navigation:navigation-runtime:${Framework.navComponents}"
