@@ -38,44 +38,13 @@ class MainActivity : AppCompatActivity() {
         } else {
             boundLayout = DataBindingUtil.setContentView(this, R.layout.activity_main)
             bottomNavView = boundLayout.mainBottomNavView
-//navController.addOnDestinationChangedListener()
-//            navController.addOnDestinationChangedListener(finishActionModeOnDestinationChanged)
             navController = Navigation.findNavController(this, R.id.main_nav_host_fragment)
             navController.addOnDestinationChangedListener(finishActionModeOnDestinationChanged)
             appBarConfig = AppBarConfiguration(navController.graph)
             boundLayout.mainBottomNavView.setupWithNavController(navController)
 
-//            setUpNavMenus(navController)
-//            setUpBottomNavMenu(findNavController(R.id.main_bottom_nav_view))
-//            findNavController(R.id.main_nav_host_fragment)
-//            boundLayout.testButton.setOnClickListener {
-//                startActivity(Intent(this, IntroActivity::class.java))
-//            }
         }
     }
-
-    /**
-     * This hook is called whenever an item in your options menu is selected.
-     * The default implementation simply returns false to have the normal
-     * processing happen (calling the item's Runnable or sending a message to
-     * its Handler as appropriate).  You can use this method for any items
-     * for which you would like to do processing without those other
-     * facilities.
-     *
-     *
-     * Derived classes should call through to the base class for it to
-     * perform the default menu handling.
-     *
-     * @param item The menu item that was selected.
-     *
-     * @return boolean Return false to allow normal menu processing to
-     * proceed, true to consume it here.
-     *
-     * @see .onCreateOptionsMenu
-     */
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        return item.onNavDestinationSelected(navController)||super.onOptionsItemSelected(item)
-//    }
 
     private fun setUpNavMenus(navController: NavController) {
         boundLayout.mainBottomNavView.setupWithNavController(navController = navController)
