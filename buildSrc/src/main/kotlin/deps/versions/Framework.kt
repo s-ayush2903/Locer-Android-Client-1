@@ -9,7 +9,8 @@ object Framework {
     const val constraintLayout = "1.1.3"
     const val materialDesign = "1.1.0"
     const val swipeRefreshLayout = "1.1.0-alpha03"
-
+    const val coordLayout = "1.1.0"
+    const val drawerLayout = "1.1.0"
     const val sharedPreferences = "1.1.0"
 
     // external deps go in here

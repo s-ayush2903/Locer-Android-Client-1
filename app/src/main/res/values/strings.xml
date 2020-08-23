@@ -7,4 +7,8 @@
     <string name="launched_once">Intro Activity launched once</string>
     <string name="permssions_title">We need permissions to soothen your experience</string>
     <string name="permssions_desc">Please provide us the permissions to get the best use case</string>
+
+    <string name="hide_bottom_view_on_scroll_behavior">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
+
+
 </resources>

@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:id="@+id/main_navigation"
-  app:startDestination="@id/cartFragment">
+  app:startDestination="@id/homeFragment">
     <fragment
       android:id="@+id/cartFragment"
       android:name="org.locer.in.CartFragment"
@@ -17,6 +17,7 @@
           android:id="@+id/action_cartFragment_to_historyFragment"
           app:destination="@id/historyFragment" />
     </fragment>
+
     <fragment
       android:id="@+id/homeFragment"
       android:name="org.locer.in.HomeFragment"
@@ -31,6 +32,7 @@
           android:id="@+id/action_homeFragment_to_cartFragment"
           app:destination="@id/cartFragment" />
     </fragment>
+
     <fragment
       android:id="@+id/wishlistFragment"
       android:name="org.locer.in.WishlistFragment"
@@ -45,6 +47,7 @@
           android:id="@+id/action_wishlistFragment_to_cartFragment"
           app:destination="@id/cartFragment" />
     </fragment>
+
     <fragment
       android:id="@+id/historyFragment"
       android:name="org.locer.in.HistoryFragment"
@@ -59,4 +62,5 @@
           android:id="@+id/action_historyFragment_to_cartFragment"
           app:destination="@id/cartFragment" />
     </fragment>
+
 </navigation>
