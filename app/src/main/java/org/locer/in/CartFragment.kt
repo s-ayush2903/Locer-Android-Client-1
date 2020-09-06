@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import org.locer.`in`.databinding.FragmentCartBinding
 
 /**
@@ -23,7 +22,13 @@ class CartFragment : Fragment() {
         cartBoundLayout =
             DataBindingUtil.inflate(inflater, R.layout.fragment_cart, container, false)
 //        return inflater.inflate(R.layout.fragment_cart, container, false)
-
+        val toolbar = cartBoundLayout.toolbarCartFrag
+        val activity = activity as MainActivity
+        activity.setSupportActionBar(toolbar)
+        activity.supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(false) // change this to true after drawer is implemented
+            setTitle("CartFragment")
+        }
         return cartBoundLayout.root
     }
 
