@@ -5,6 +5,7 @@ import deps.versions.Framework
 /* Put kapts too here */
 // All android deps go in here (other than testing ones)
 object Framework {
+
     // Jetpack Deps
     const val navFragment = "androidx.navigation:navigation-fragment-ktx:${Framework.navComponents}"
     const val navRuntime = "androidx.navigation:navigation-runtime:${Framework.navComponents}"
@@ -16,7 +17,8 @@ object Framework {
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Framework.constraintLayout}"
     const val materialDesign = "com.google.android.material:material:${Framework.materialDesign}"
     const val swipeRefreshLayout = "androidx.swiperefreshlayout:swiperefreshlayout:${Framework.swipeRefreshLayout}"
-
+    const val coordLayout = "androidx.coordinatorlayout:coordinatorlayout:${Framework.coordLayout}"
+    const val drawerLayout = "androidx.drawerlayout:drawerlayout:${Framework.drawerLayout}"
     const val sharedPreferences = "androidx.preference:preference-ktx:${Framework.sharedPreferences}"
 
     //Lifecycle handling

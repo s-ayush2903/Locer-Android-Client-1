@@ -2,7 +2,12 @@ import coreplugins.BuildPlugins.absoluteRawKotlin
 import deps.App
 import deps.implementations.Framework.appCompat
 import deps.implementations.Framework.constraintLayout
+import deps.implementations.Framework.coordLayout
+import deps.implementations.Framework.drawerLayout
 import deps.implementations.Framework.introScreen
+import deps.implementations.Framework.navFragment
+import deps.implementations.Framework.navRuntime
+import deps.implementations.Framework.navUi
 import deps.implementations.Framework.sharedPreferences
 import deps.implementations.KtServices.ktx
 import deps.implementations.TestingFramework.androidxTestExt
@@ -87,6 +92,11 @@ dependencies {
     implementation(constraintLayout)
     implementation(introScreen)
     implementation(sharedPreferences)
+    implementation(navFragment)
+    implementation(navUi)
+    implementation(coordLayout)
+    implementation(drawerLayout)
+    implementation(navRuntime)
 
     // put test deps here
     testImplementation(junit4)
