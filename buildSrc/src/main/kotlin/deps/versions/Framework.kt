@@ -12,6 +12,7 @@ object Framework {
     const val coordLayout = "1.1.0"
     const val drawerLayout = "1.1.0"
     const val sharedPreferences = "1.1.0"
+    const val retrofit = "2.9.0"
 
     // external deps go in here
     const val introScreen = "6.0.0"
