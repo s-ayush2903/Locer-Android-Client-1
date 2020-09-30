@@ -2,6 +2,4 @@
 
 Android-Client for Locer
 
-A work in progress!
-
-Teaching the approvals
+It is an Android client for fulfilling daily essential needs of people and it targets a vast huge community
