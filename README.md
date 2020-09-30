@@ -1,6 +1,8 @@
 # LocerAndroidClient
 
-[![Slack](https://img.shields.io/badge/Slack-chat-E01E5A)](https://locer.slack.com)
+|Let's meet at Slack|
+|-----------|
+|[![Slack](https://img.shields.io/badge/Slack-chat-E01E5A)](https://locer.slack.com)|
 
 
 Android-Client for Locer
