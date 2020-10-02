@@ -1,6 +1,6 @@
 ## Android Navigation Components
 
-Navigation components is simply a collection of libraries, plugin and tooling for making Android Navigation easier. Asides making Android Navigation easier, it also helps in handling backstacks, automating fragment transactions, handling transition animations and simplifying deep linking.
+Navigation components is simply a collection of libraries, plugin and tooling for making Android Navigation easier. Besides making Android Navigation easier, it also helps in handling backstacks, automating fragment transactions, handling transition animations and simplifying deep linking.
 
 There are three major parts to the Navigation Components which includes the;
 - Navigation Graph
