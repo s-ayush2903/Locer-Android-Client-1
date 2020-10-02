@@ -25,18 +25,18 @@ Every NavHost possess its own corresponding NavController(an object which helps 
 - Add a navigation graph in your project. To do this;
  1. In the Project window, right click on the `res` directory
  2. Then click New > Android Resource File.
- 3. Type a name in the File name field e.g "nav_graph".
+ 3. Type a name in the File name field e.g `nav_graph`.
  4. From the resource type drop-down list, click on Navigation then click OK to proceed.
 
 - After which it opens in the navigation editor to edit the navigation graph visually or edit the XML directly.
 
-- Add a NavHostFragment via the Layer Editor;
+- Add a NavHostFragment via the Layer Editor
  1. In the [Layout Editor](https://developer.android.com/studio/write/layout-editor) double click on your activity's layout XML file in your list of project files.  
- 2. Search for "NavHostFragment".
+ 2. Search for `NavHostFragment`.
  3. Drag the NavHostFragment view onto your activity.
  4. In the navigation graph dialog that appears, choose the corresponding navigation graph to associate with this NavHostFragment, and then click OK.
 
-- Add a new destination using the Navigation Editor;
+- Add a new destination using the Navigation Editor
  1. Click the New Destination icon in the Navigation editor and select Create new destination.
  2. In the New Android Component dialog that appears, create your fragment. [Click here to learn more about fragments](https://developer.android.com/guide/components/fragments).
 
@@ -45,7 +45,7 @@ Every NavHost possess its own corresponding NavController(an object which helps 
 
 2. Then click the Assign start destination button to continue.
 
-- Connect destinations;
+- Connect destinations
  1. Hover over the right side of the destination that you want users to navigate from in the design tab.
  2. Click and drag your cursor over the destination you want users to navigate to and then release.
  3. Click on the arrow to highlight the action. 
