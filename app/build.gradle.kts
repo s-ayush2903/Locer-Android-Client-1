@@ -99,6 +99,8 @@ dependencies {
     implementation(coordLayout)
     implementation(drawerLayout)
     implementation(navRuntime)
+    implementation(retrofit)
+    implementation(gsonConverter)
 
     // put test deps here
     testImplementation(junit4)
