@@ -15,6 +15,8 @@ import deps.implementations.TestingFramework.espressoCore
 import deps.implementations.TestingFramework.junit4
 import deps.implementations.TestingFramework.standardRunner
 import org.gradle.api.JavaVersion.VERSION_1_8
+import deps.implementations.Framework.gsonConverter
+import deps.implementations.Framework.retrofit
 
 plugins {
     id(coreplugins.BuildPlugins.androidApplication)
@@ -97,6 +99,8 @@ dependencies {
     implementation(coordLayout)
     implementation(drawerLayout)
     implementation(navRuntime)
+    implementation(retrofit)
+    implementation(gsonConverter)
 
     // put test deps here
     testImplementation(junit4)
