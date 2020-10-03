@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import org.locer.`in`.databinding.FragmentHomeBinding
+import org.locer.`in`.recyclerView.Datasource
+import org.locer.`in`.recyclerView.ItemAdapter
 
 /**
  * Authored by Ayush Shrivastava on 23/8/20
@@ -30,6 +32,13 @@ class HomeFragment : Fragment() {
             setTitle("Home Fragment")
         }
         return homeBoundLayout.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val myDataset = Datasource().loadAffirmations()
+        homeBoundLayout.recyclerView.adapter =
+            ItemAdapter(this, myDataset)
     }
 
 }
