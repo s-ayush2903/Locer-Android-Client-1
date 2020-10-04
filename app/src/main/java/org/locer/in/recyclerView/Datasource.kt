@@ -1,8 +1,9 @@
 package org.locer.`in`.recyclerView
-
+/*
+ This class is used to get data from the strings.xml file, in future we can use it to bend any data from the internet and this class will help us to
+ join the retrofit data with the data model class namely Affirmation
+*/
 import org.locer.`in`.R
-// This class is used to get data from the strings.xml file, in future we can use it to bend any data from the internet and this class will help us to
-// join the retrofit data with the data model class namely Affirmation
 class Datasource {
     fun loadAffirmations(): List<Affirmation> {
         return listOf<Affirmation>(
