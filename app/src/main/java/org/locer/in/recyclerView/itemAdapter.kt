@@ -25,7 +25,6 @@ class ItemAdapter(private val context: HomeFragment, private val dataset: List<A
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val item = dataset[position]
-        holder.textView.text = context.resources.getString(item.stringResourceId)
+        holder.textView.text = context.resources.getString(dataset[position].stringResourceId)
     }
 }
