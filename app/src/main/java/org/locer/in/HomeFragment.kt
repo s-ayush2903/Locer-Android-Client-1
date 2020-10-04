@@ -36,9 +36,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val myDataset = Datasource().loadAffirmations()
-        homeBoundLayout.recyclerView.adapter =
-            ItemAdapter(this, myDataset)
+        homeBoundLayout.recyclerView.adapter = ItemAdapter(this, Datasource().loadAffirmations())
     }
 
 }
