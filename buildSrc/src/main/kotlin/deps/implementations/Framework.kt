@@ -28,6 +28,12 @@ object Framework {
 //    const val lifecycleCoRoutines = "androidx.lifecycle:lifecycle-livedata-ktx:${Framework.lifecycleVersion}"
 
 
+    // Firebase Deps
+    const val firebaseServices = "com.google.gms:google-services:${Framework.firebaseServices}"
+    const val firebaseBom = "com.google.firebase:firebase-bom:${Framework.firebaseBom}"
+    const val firebaseAnalytics = "com.google.firebase:firebase-analytics-ktx"
+
+
     // External Libs (like introScreen)
     const val introScreen = "com.github.AppIntro:AppIntro:${Framework.introScreen}"
 }

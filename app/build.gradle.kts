@@ -4,10 +4,14 @@ import deps.implementations.Framework.appCompat
 import deps.implementations.Framework.constraintLayout
 import deps.implementations.Framework.coordLayout
 import deps.implementations.Framework.drawerLayout
+import deps.implementations.Framework.firebaseAnalytics
+import deps.implementations.Framework.firebaseBom
+import deps.implementations.Framework.gsonConverter
 import deps.implementations.Framework.introScreen
 import deps.implementations.Framework.navFragment
 import deps.implementations.Framework.navRuntime
 import deps.implementations.Framework.navUi
+import deps.implementations.Framework.retrofit
 import deps.implementations.Framework.sharedPreferences
 import deps.implementations.KtServices.ktx
 import deps.implementations.TestingFramework.androidxTestExt
@@ -15,14 +19,15 @@ import deps.implementations.TestingFramework.espressoCore
 import deps.implementations.TestingFramework.junit4
 import deps.implementations.TestingFramework.standardRunner
 import org.gradle.api.JavaVersion.VERSION_1_8
-import deps.implementations.Framework.gsonConverter
-import deps.implementations.Framework.retrofit
+
+/** Static Imports don't work with plugins */
 
 plugins {
     id(coreplugins.BuildPlugins.androidApplication)
     id(coreplugins.BuildPlugins.kotlinAndroid)
     id(coreplugins.BuildPlugins.kotlinAndroidExtensions)
     id(coreplugins.BuildPlugins.kotlinKapt)
+    id(coreplugins.BuildPlugins.firebasePlugin)
 }
 
 android {
@@ -76,7 +81,7 @@ android {
         }
     }
 
-    buildFeatures{
+    buildFeatures {
         dataBinding = true
     }
 
@@ -101,6 +106,12 @@ dependencies {
     implementation(navRuntime)
     implementation(retrofit)
     implementation(gsonConverter)
+
+    implementation(platform(firebaseBom))
+    implementation(firebaseAnalytics)
+
+    // Add the dependencies for any other desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
 
     // put test deps here
     testImplementation(junit4)
