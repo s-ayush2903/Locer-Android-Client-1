@@ -17,6 +17,8 @@ import deps.implementations.TestingFramework.espressoCore
 import deps.implementations.TestingFramework.junit4
 import deps.implementations.TestingFramework.standardRunner
 import org.gradle.api.JavaVersion.VERSION_1_8
+import deps.implementations.Framework.gsonConverter
+import deps.implementations.Framework.retrofit
 
 plugins {
     id(coreplugins.BuildPlugins.androidApplication)

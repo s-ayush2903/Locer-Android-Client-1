@@ -22,6 +22,7 @@ object Framework {
     const val sharedPreferences = "androidx.preference:preference-ktx:${Framework.sharedPreferences}"
     const val retrofit = "com.squareup.retrofit2:retrofit:${Framework.retrofit}"
     const val gsonConverter = "com.squareup.retrofit2:converter-gson:${Framework.retrofit}"
+
     //Lifecycle handling
 //    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:${Framework.lifecycleVersion}"
 //    const val lifecycleCoRoutines = "androidx.lifecycle:lifecycle-livedata-ktx:${Framework.lifecycleVersion}"
