@@ -5,6 +5,7 @@ import deps.implementations.Framework.constraintLayout
 import deps.implementations.Framework.coordLayout
 import deps.implementations.Framework.drawerLayout
 import deps.implementations.Framework.firebaseAnalytics
+import deps.implementations.Framework.firebaseAuth
 import deps.implementations.Framework.firebaseBom
 import deps.implementations.Framework.gsonConverter
 import deps.implementations.Framework.introScreen
@@ -107,8 +108,12 @@ dependencies {
     implementation(retrofit)
     implementation(gsonConverter)
 
+    // Firebase Essential
     implementation(platform(firebaseBom))
     implementation(firebaseAnalytics)
+
+    // Firebase Auth
+    implementation(firebaseAuth)
 
     // Add the dependencies for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries

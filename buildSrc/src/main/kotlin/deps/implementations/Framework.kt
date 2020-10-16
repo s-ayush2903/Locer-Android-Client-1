@@ -32,6 +32,7 @@ object Framework {
     const val firebaseServices = "com.google.gms:google-services:${Framework.firebaseServices}"
     const val firebaseBom = "com.google.firebase:firebase-bom:${Framework.firebaseBom}"
     const val firebaseAnalytics = "com.google.firebase:firebase-analytics-ktx"
+    const val firebaseAuth = "com.firebaseui:firebase-ui-auth:${Framework.firebaseAuth}"
 
 
     // External Libs (like introScreen)
