@@ -10,4 +10,7 @@ object BuildPlugins {
     const val kotlinAndroidExtensions = "kotlin-android-extensions"
     const val kotlinKapt = "kotlin-kapt"
 
+    // Firebase
+    const val firebasePlugin = "com.google.gms.google-services"
+
 }

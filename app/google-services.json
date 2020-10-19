@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "248955814962",
+    "firebase_url": "https://locerandroidclient.firebaseio.com",
+    "project_id": "locerandroidclient",
+    "storage_bucket": "locerandroidclient.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:248955814962:android:549c8e05bf3bd9c283282b",
+        "android_client_info": {
+          "package_name": "org.locer.in"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "248955814962-782ca6ocavuuvh1j2g5tgjvrrvtsmfgv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWqPtWl548hlsn-XadDIeJj1QN6EqMp1g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "248955814962-782ca6ocavuuvh1j2g5tgjvrrvtsmfgv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,6 +4,9 @@ import deps.implementations.Framework.appCompat
 import deps.implementations.Framework.constraintLayout
 import deps.implementations.Framework.coordLayout
 import deps.implementations.Framework.drawerLayout
+import deps.implementations.Framework.firebaseAnalytics
+import deps.implementations.Framework.firebaseAuth
+import deps.implementations.Framework.firebaseBom
 import deps.implementations.Framework.gsonConverter
 import deps.implementations.Framework.introScreen
 import deps.implementations.Framework.navFragment
@@ -18,11 +21,14 @@ import deps.implementations.TestingFramework.junit4
 import deps.implementations.TestingFramework.standardRunner
 import org.gradle.api.JavaVersion.VERSION_1_8
 
+/** Static Imports don't work with plugins */
+
 plugins {
     id(coreplugins.BuildPlugins.androidApplication)
     id(coreplugins.BuildPlugins.kotlinAndroid)
     id(coreplugins.BuildPlugins.kotlinAndroidExtensions)
     id(coreplugins.BuildPlugins.kotlinKapt)
+    id(coreplugins.BuildPlugins.firebasePlugin)
 }
 
 android {
@@ -101,6 +107,16 @@ dependencies {
     implementation(navRuntime)
     implementation(retrofit)
     implementation(gsonConverter)
+
+    // Firebase Essential
+    implementation(platform(firebaseBom))
+    implementation(firebaseAnalytics)
+
+    // Firebase Auth
+    implementation(firebaseAuth)
+
+    // Add the dependencies for any other desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
 
     // put test deps here
     testImplementation(junit4)
