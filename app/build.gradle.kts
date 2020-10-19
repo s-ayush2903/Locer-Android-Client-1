@@ -9,6 +9,7 @@ import deps.implementations.Framework.firebaseAuth
 import deps.implementations.Framework.firebaseBom
 import deps.implementations.Framework.gsonConverter
 import deps.implementations.Framework.introScreen
+import deps.implementations.Framework.multiDex
 import deps.implementations.Framework.navFragment
 import deps.implementations.Framework.navRuntime
 import deps.implementations.Framework.navUi
@@ -107,6 +108,7 @@ dependencies {
     implementation(navRuntime)
     implementation(retrofit)
     implementation(gsonConverter)
+    implementation(multiDex)
 
     // Firebase Essential
     implementation(platform(firebaseBom))

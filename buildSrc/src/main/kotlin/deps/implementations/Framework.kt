@@ -37,6 +37,9 @@ object Framework {
 
     // External Libs (like introScreen)
     const val introScreen = "com.github.AppIntro:AppIntro:${Framework.introScreen}"
+
+    // Multi-Dex Support
+    const val multiDex = "androidx.multidex:multidex:${Framework.multiDex}"
 }
 
 /* Activate the commented out deps when they are need to be in use and use their most stable version not the latest one */
